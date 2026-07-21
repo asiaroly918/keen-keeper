@@ -6,4 +6,10 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: '/keen-keeper/', 
+
+build: {
+    chunkSizeWarningLimit: 1000,
+  },
+
 })
+

@@ -1,46 +1,57 @@
-# KeenKeeper 🤝
+# Keen Keeper 🤝
 
-KeenKeeper is a personal relationship management (CRM) web application designed to help users maintain and nurture meaningful connections with friends, family, and mentors. It tracks contact frequency, shows relationship statuses (On-track, Almost Due, Overdue), and helps users stay consistent with their social circles.
-
-## 🚀 Live Demo
-Check out the live application here: [KeenKeeper Live Link](https://asiaroly918.github.io/b13-a7-keen-keeper/)
+Keen Keeper is a modern React web application built with Vite and Tailwind CSS. It provides visual insights, contact tracking, and analytics to help users maintain meaningful relationships with friends.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- **Interactive Dashboard:** View a comprehensive grid of 12 default friends with their profiles, current relationship statuses, and tags.
-- **Dynamic Friend Details:** Click on any friend's card to view their complete profile, detailed relationship metrics, and quick action steps.
-- **Add Friend Form (`/add-friend`):** Easily add new contacts with customized names, emails, photos, tags, and contact goals (weekly, bi-weekly, monthly).
-- **Persistent Global Layout:** A beautifully designed sticky Navigation Bar and a dark-green Footer that persist seamlessly across all pages.
-- **Quick Check-In Actions:** Log calls, text messages, or meetups directly from a friend's profile.
-- **Fully Responsive Design:** Crafted with a clean, modern aesthetic utilizing Tailwind CSS, fully optimized for mobile, tablet, and desktop viewports.
+- **Dashboard & Banner:** Interactive hero overview presenting key stats at a glance.
+- **Friends Directory:** Grid layout listing all friends with status indicators and tags.
+- **Friendship Analytics:** Visual charts (Bar & Pie Charts via Recharts) displaying contact gaps against user goals and status distribution.
+- **Interaction Timeline:** Visual history logging recent interactions and milestones.
+- **Detailed Friend Views:** Dedicated route for viewing specific friend profiles.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend Library:** React.js (built with Vite)
-- **Routing:** React Router DOM (Declarative client-side routing)
-- **Styling:** Tailwind CSS (using the official `@tailwindcss/vite` plugin)
-- **Icons:** SVG-based responsive iconography
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM (`v6/v7`)
+- **Charts:** Recharts
+- **Icons:** Lucide React / SVG
 
 ---
 
-## 📂 Folder Structure
+## 📂 Project Structure
 
 ```text
-src/
-├── components/
-│   └── shared/
-│       ├── AddFriend.jsx             # Component for adding new contacts
-│       ├── Friendship Analytics.jsx  # Analytics overview page
-│       ├── Navbar.jsx                # Global navigation bar
-│       └── Timeline.jsx              # Connection history timeline
-├── layout/
-│   ├── FriendsDetail.jsx             # Individual friend profile page
-│   └── Rootlayout.jsx                # Main layout wrapper (Navbar, Outlet, Footer)
-├── main.jsx                          # Main routing & application entrypoint
-├── index.css                         # Tailwind CSS global styles
-└── public/
-    └── friends.json                  # Local JSON database with 12 friend profiles
+keen-keeper/
+├── public/
+│   ├── favicon.svg
+│   ├── friends.json
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── shared/
+│   │       ├── AddFriend.jsx
+│   │       ├── Banner.jsx
+│   │       ├── Footer.jsx
+│   │       ├── Friends.jsx
+│   │       ├── FriendshipAnalytics.jsx
+│   │       ├── Navbar.jsx
+│   │       └── Timeline.jsx
+│   ├── layout/
+│   │   ├── Friendsdetail.jsx
+│   │   └── Rootlayout.jsx
+│   ├── pages/
+│   │   └── homepage/
+│   │       └── Homepage.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js

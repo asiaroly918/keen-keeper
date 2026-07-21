@@ -2,10 +2,12 @@ import React from 'react';
 import Banner from '../../components/shared/Banner';
 import Friends from '../../components/shared/Friends';
 import TimelinePage from '../../components/shared/Timeline';
-import FriendshipAnalytics from '../../components/shared/Friendship Analytics ';
+import FriendshipAnalytics from "../../components/shared/FriendshipAnalytics";
+import friendsData from "../../data/friends.json";
 
-// Fetching local JSON data
-const res = fetch('/friends.json').then(res => res.json());
+
+// Create a resolved promise for React 19's use() hook
+const friendsPromise = Promise.resolve(friendsData);
 
 const Homepage = () => {
   return (
@@ -13,8 +15,8 @@ const Homepage = () => {
       {/* Hero Banner Section */}
       <Banner />
       
-      {/* Friends Grid List (Passing promise to use() hook in Friends component) */}
-      <Friends friendsResponse={res} /> 
+      {/* Friends Grid List */}
+      <Friends friendsResponse={friendsPromise} /> 
       
       {/* Interaction Timeline Section */}
       <TimelinePage /> 
